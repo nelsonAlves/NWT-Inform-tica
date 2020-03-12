@@ -1,0 +1,69 @@
+***************** Contrato para trafego e integração dos dados de Pessoa do legado sobre o protocolo SOAP para ser consumido pela SPA (nova aplicação).
+
+<Pessoas>
+	<Pessoa>
+		<Id>
+			01
+		</Id>
+		<Nome>
+			Fulano de tal...
+		</Nome>
+	</Pessoa>
+</Pessoas>
+
+***************** Especificação do contrato para trafego de dados via REST
+
+
+Payload
+{
+	Data : Este atributo deverá conter os dados da(s) pessoa(s)
+	Menssagens : Succeess ou Erros (Campo a,b,c deve ser preenchidos)
+	StatusCode : 200, 400, 500
+}
+
+***************** Contrato para trafego dos dados de Pessoa fornecida na SAP para a operação de inclusão de um novo endereço na API
+
+Payload
+{
+	Data :
+		Pessoa : {Id:1}
+		Endereco : {Logradouro: RUZ DE BAIXO, Endereco: RUA DE CIMA....}
+	Menssagens : Succeess
+	StatusCode : 200
+}
+
+
+***************** Contrato para trafego dos dados de Pessoa fornecida na SAP para a operação de alteração de um novo endereço na API 
+
+Payload
+{
+	Data :
+		Pessoa : {Id:1}
+		Endereco : {Id: 1, Logradouro: RUZ DE BAIXO, Endereco: RUA DE CIMA....}
+	Menssagens : Succeess
+	StatusCode : 200
+}
+
+
+***************** Contrato para trafego dos dados de Pessoa fornecida na SAP para a operação de exclusão de um endereço na API 
+
+Payload
+{
+	Data :
+		Pessoa : {Id:1}
+		Endereco : {Id: 1}
+	Menssagens : Succeess
+	StatusCode : 200
+}
+
+Fazer a implatação do Swagger/Swagger UI (conforme especificação SOA) para que sirva como serviço de descoberta e monitoração dos end points, documentação da apis.
+
+*************** Ambiente de DEV/HML e PRD
+
+Fazer a publicação do novo sistema em um abiente contenizado:
+	Requisitos: 
+		SO Libnux versão x.y.z
+		Java 8
+
+
+		
