@@ -1,1 +1,1 @@
-# NWT-Inform-tica
+# NWT-Informatica
